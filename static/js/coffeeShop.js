@@ -14,6 +14,10 @@ const addItemToCart = (itemName) => {
   incrementCartTotal(1.50);
 });
 
+$("#place-order").on("click", () =>{
+  incrementCoffeeSold($('#cart-items').children().length);
+  resetCart();
+})
 
 const resetCart = () => {
   $('#cart-total').html('0.00');
