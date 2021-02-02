@@ -1,12 +1,19 @@
 "use strict";
 
 const addItemToCart = (itemName) => {
+
   $('#cart-items').append(`
     <tr>
       <td>${itemName}</td>
     </tr>
   `);
 };
+
+  $(".add-to-order").on("click", () => {
+  addItemToCart('coffee');
+  incrementCartTotal(1.50);
+});
+
 
 const resetCart = () => {
   $('#cart-total').html('0.00');
